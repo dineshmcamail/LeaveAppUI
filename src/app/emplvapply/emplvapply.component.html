@@ -1,0 +1,52 @@
+<div>
+  <br>
+    <hr>
+  <br>
+  <table align="center">
+    <tr>
+      <td>
+        Start Date
+      </td>
+      <td>
+          <input type=date name="strdate" [(ngModel)] = "emplvedet.strdate">
+      </td>
+    </tr>
+    <tr>
+        <td>
+          End date    
+        </td>
+        <td>
+          <input type=date name="enddate" [(ngModel)] = "emplvedet.enddate">
+        </td>
+      </tr>
+      <tr>
+          <td>
+            Number of days
+          </td>
+          <td>
+            <input type="number" name="noofdays" [(ngModel)] = "emplvedet.noofdays">
+          </td>
+        </tr>
+        <tr>
+            <td>
+              Leave Type
+            </td>
+            <td>
+              <input type="text" name="status" [(ngModel)] = "emplvedet.leavetype">
+            </td>
+          </tr>
+          <tr>
+              <td>
+                Leave Reason
+              </td>
+              <td>
+                  <input type="text" name="reason" [(ngModel)] = "emplvedet.reason">
+              </td>
+            </tr>
+  </table>
+  <br><br>
+    
+   <button (click)="showlvedet()" class="button button2">Apply Leave</button> 
+   <button (click)="showempdash()"class="button button2">Cancel</button> 
+ 
+ </div>

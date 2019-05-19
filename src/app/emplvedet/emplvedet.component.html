@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="col-lg-12">
+    <h2>My Leave Application</h2>
+    <hr>    
+    <br>  
+    <style>
+      table, th, td {
+      padding: 10px;
+      border: 1px solid black; 
+      border-collapse: collapse;
+      }
+    </style>
+    <div class="row">
+      <table class="table" align="center">
+        <thead class="thead-dark">
+          <tr>
+            <th bgcolor="lightyellow" scope="col">Reference ID</th>            
+            <th bgcolor="lightyellow" scope="col">Start date</th> 
+            <th bgcolor="lightyellow" scope="col">End date</th>
+            <th bgcolor="lightyellow" scope="col">Duration</th>
+            <th bgcolor="lightyellow" scope="col">Leave Type</th>
+            <th bgcolor="lightyellow" scope="col">Status</th> 
+            <th bgcolor="lightyellow" scope="col">Reason</th>
+            <th bgcolor="lightyellow" scope="col">Applied On</th>
+            <th bgcolor="lightyellow" scope="col">Manager Comments</th>           
+          </tr>
+        </thead>
+        <tbody>
+             <tr *ngFor="let lvedet of empdetservice.empleavelist">            
+                <td>{{lvedet.id}}</td>
+                <td>{{lvedet.noofdays}}</td>
+                <td>{{lvedet.strdate}}</td>
+                <td>{{lvedet.enddate}}</td>
+                <td>{{lvedet.leavetype}}</td>
+                <td>{{lvedet.status}}</td>
+                <td>{{lvedet.reason}}</td>
+                <td>{{lvedet.appliedon}}</td>
+                <td>{{lvedet.mgrcmnt}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    {{empdetservice.empno}}
+    <button (click)="showdashbrd()" align="left" class="button button2">Show Dashboard</button>
+    <button (click)="shownewapp()" align="right" class="button button2">Apply New Leave</button>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+
+  <div class="container">
+    
+    <h2>My Profile</h2>
+    <hr>    
+    <br>  
+    <div class="row">
+      <table border = "0" className="mydettbl" align="center">
+        <tbody>
+          <tr>
+            <td align="left">Employee ID : </td>
+            <td align="left">{{empdetservice.empdetail.id}}</td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+              <td align="left">Full Name : </td>
+              <td align="left">{{empdetservice.empdetail.name}}</td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td align="left">Email Address:</td>
+            <td align="left">{{empdetservice.empdetail.email}}</td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td align="left">Mobile Number:</td>
+            <td align="left">{{empdetservice.empdetail.mobile}}</td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr align="center"><td>Available Leave Balance:</td><td align="left">{{empdetservice.empdetail.leavebal}}</td></tr>
+          <tr>
+            <td align="left">Date Joined : </td>
+            <td align="left">{{empdetservice.empdetail.joineddate}} </td>  
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td align="left">Department : </td>
+            <td align="left">{{empdetservice.empdetail.department}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <button (click)="showdashbrd()" align="left" class="button button2">Show Dashboard</button>
+</div>
+ 
+

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="col-lg-12">
+    <h2>My Reportees Pending Leave Application</h2>
+    <hr>    
+    <br>  
+    <style>
+      table, th, td {
+      padding: 10px;
+      border: 1px solid black; 
+      border-collapse: collapse;
+      }
+    </style>
+    <div class="row">
+      <table class="table" align="center">
+        <thead class="thead-dark">
+          <tr>
+              
+              <th bgcolor="lightgreen" scope="col">Employee ID</th>
+              <th bgcolor="lightgreen" scope="col">Employee Name</th> 
+            <th bgcolor="lightgreen" scope="col">Leave ID</th>
+            <th bgcolor="lightgreen" scope="col">Number of days</th>
+            <th bgcolor="lightgreen" scope="col">Start date</th> 
+            <th bgcolor="lightgreen" scope="col">End date</th>
+            <th bgcolor="lightgreen" scope="col">Leave Type</th>
+            <th bgcolor="lightgreen" scope="col">Status</th> 
+            <th bgcolor="lightgreen" scope="col">Reason</th>
+            <th bgcolor="lightgreen" scope="col">Leave Balance</th>          
+          </tr>
+        </thead>
+        <tbody>
+             <tr *ngFor="let lvedet of empdetservice.rptleavelist" (click)="onSelect(lvedet)" ng-class="{'selected':$index == selectedRow}">
+                <td><input type="checkbox"></td>
+                <td>{{lvedet.empid}}</td>
+                <td>{{lvedet.empname}}</td>            
+                <td>{{lvedet.id}}</td>
+                <td>{{lvedet.noofdays}}</td>
+                <td>{{lvedet.strdate}}</td>
+                <td>{{lvedet.enddate}}</td>
+                <td>{{lvedet.leavetype}}</td>
+                <td>{{lvedet.status}}</td>
+                <td>{{lvedet.reason}}</td>
+                <td>{{lvedet.lvebal}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <button (click)="showappdeny()" align="right" class="button button2">Approve / Deny</button>
+    <button (click)="showdashbrd()" class="button button2">Show Dashboard</button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+
+  <div class="container">
+    
+    <h2>Manager Details </h2>
+    <hr>    
+    <br>  
+    <div class="row">
+      <table border = "0" className="mgrdettbl" align="center">
+        <tbody>
+          <tr>
+            <td align="left">Employee ID : </td>
+            <td align="left">{{empdetservice.mgrdetail.id}}</td>          
+          </tr>
+          <tr>
+              <td align="left">Full Name : </td>
+              <td align="left">{{empdetservice.mgrdetail.name}}</td>          
+            </tr>
+            <tr><td align="left">Email Address:</td><td align="left">{{empdetservice.mgrdetail.email}}</td></tr>
+            <tr><td align="left">Mobile Number:</td><td align="left">{{empdetservice.mgrdetail.mobile}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <button (click)="showdashbrd()" align="left" class="button button2">Show Dashboard</button>
+</div>
+ 
+

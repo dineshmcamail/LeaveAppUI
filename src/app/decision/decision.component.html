@@ -1,0 +1,60 @@
+
+  <div class="container">
+    
+    <h2>Approve Deny Leave </h2>
+    <hr>    
+    <br>  
+    <div class="row">
+      <table border = "0" className="appdenytbl" align="center">
+        <tbody>
+          <tr>
+            <td align="left">Employee ID : </td>
+            <td align="left">{{slctlvedet.empid}}</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td align="left">Stard Date : </td>
+            <td align="left">{{slctlvedet.strdate}} </td>           
+          </tr>
+          <tr>
+              <td align="left">Employee Name : </td>
+              <td align="left">{{slctlvedet.empname}}</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td align="left">End Date : </td>
+              <td align="left">{{slctlvedet.enddate}} </td>           
+            </tr>
+            <tr>
+              <td align="left">Leave Balance : </td>
+              <td align="left">{{slctlvedet.lvebal}}</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td align="left">Number of days : </td>
+              <td align="left">{{slctlvedet.noofdays}} </td>           
+            </tr>
+            <tr><td align="left">Leave Type :</td><td align="right">{{slctlvedet.leavetype}}</td></tr>
+            <tr><td align="left">Reason :</td><td align="left">{{slctlvedet.reason}}</td></tr>
+            <tr></tr>
+            <tr></tr>
+          </tbody>
+      </table>
+    </div>
+    <br>
+    <form method="post">
+      <p>Comments:</p>
+    <textarea rows = "5" cols = "50" name = "Comment" [(ngModel)] = "mgrcmnt">
+       
+     </textarea>
+    </form>
+    <br><br>
+    <button (click)="doapprove()" align="left" class="button button2">Approve</button>
+    <button (click)="dodeny()" class="button button2">Deny</button>
+    <button (click)="showdashbrd()" class="button button2">Cancel</button>
+</div>
+ 
+
